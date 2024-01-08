@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong" />
+
+  <title>About us</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    .right-container {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: flex-end;
+      width: 80%;
+    }
+
+    .right-container .right-container-child {
+      color: #fff;
+      display: flex;
+      justify-content: end;
+      width: 100%;
+    }
+
+    .right-container .right-container-hamburger {
+      display: none;
+    }
+
+    .right-container .right-container-child .nav-item-active {
+      color: #fff;
+      color: black;
+      text-decoration: none;
+      transition: 1s;
+    }
+
+    .nav-item:hover {
+      color: black !important;
+      box-shadow: 0 0 5px black;
+    }
+
+    .right-container .right-container-child .nav-item-active {
+      align-items: center;
+      box-shadow: 0 0 5px black;
+      cursor: pointer;
+      display: flex;
+      font-size: 16px;
+      font-weight: 500;
+      justify-content: center;
+      margin-right: 30px;
+      overflow: hidden;
+      padding: 7.5px 15px;
+      position: relative;
+      transition: 0.2s;
+      z-index: 10;
+    }
+
+    .right-container .right-container-child .nav-item {
+      align-items: center;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      font-size: 16px;
+      font-weight: 500;
+      justify-content: center;
+      margin-right: 30px;
+      overflow: hidden;
+      padding: 7.5px 15px;
+      position: relative;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .right-container .right-container-child .nav-item-active span:first-child {
+      position: absolute;
+      animation: animate1 2s linear infinite;
+      animation-delay: 0.2s;
+      background: linear-gradient(90deg, transparent, black);
+      height: 2px;
+      left: -100%;
+      top: 0;
+      width: 100%;
+    }
+
+    @keyframes animate1 {
+      0% {
+        left: -100%;
+      }
+
+      50%,
+      100% {
+        left: 100%;
+      }
+    }
+
+    .right-container .right-container-child .nav-item-active span:nth-child(2) {
+      position: absolute;
+      animation: animate2 2s linear infinite;
+      -webkit-animation-delay: 0.7s;
+      animation-delay: 0.7s;
+      background: linear-gradient(180deg, transparent, black);
+      height: 100%;
+      right: 0;
+      top: 100%;
+
+      width: 2px;
+    }
+
+    @keyframes animate2 {
+      0% {
+        top: -100%;
+      }
+
+      50%,
+      100% {
+        top: 100%;
+      }
+    }
+
+    .right-container .right-container-child .nav-item-active span:nth-child(3) {
+      position: absolute;
+      animation: animate3 2s linear infinite;
+      -webkit-animation-delay: 1.2s;
+      animation-delay: 1.2s;
+      background: linear-gradient(270deg, transparent,black);
+      bottom: 0;
+      height: 2px;
+      right: 100%;
+      width: 100%;
+    }
+
+    @keyframes animate3 {
+      0% {
+        right: -100%;
+      }
+
+      50%,
+      100% {
+        right: 100%;
+      }
+    }
+
+    .right-container .right-container-child .nav-item-active span:nth-child(4) {
+      animation: animate4 2s linear infinite;
+      -webkit-animation-delay: 1.7s;
+      animation-delay: 1.7s;
+      background: linear-gradient(1turn, transparent, black);
+      bottom: 100%;
+      position: absolute;
+      height: 100%;
+      left: 0;
+      width: 2px;
+    }
+
+    @keyframes animate4 {
+      0% {
+        bottom: -100%;
+      }
+
+      50%,
+      100% {
+        bottom: 100%;
+      }
+    }
+
+    #logo {
+      height: 70px;
+      width: 70px;
+      border-radius: 75%;
+    }
+
+    #navi {
+      color: white;
+      height: 80px;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 99vw;
+      z-index: 10;
+    }
+
+    
+    #v1 {
+      color:white;
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+
+    .hero {
+      /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3RKeHzSXzO-p4aaw0E3IPpzuxKYaXEw9YUoFh_xpKxqz54_1_a7UZxVZRaA&s');
+      background-size: cover;
+      background-repeat: no-repeat; */
+
+
+
+      margin: 0;
+      padding: 0;
+      height: 208vh;
+    }
+
+    .heading h1 {
+      color: black;
+      font-size: 80px;
+      text-align: center;
+      padding-top: 100px;
+      font-weight: 800;
+      font-style: normal;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: underline;
+      border-width: 0.5px;
+    }
+
+    .container {
+      /* background-color: #c49b63 ; */
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 90%;
+    }
+
+    .hero-container {
+      flex: 1;
+      width: 600px;
+      margin: 0px 25px;
+    }
+
+    .hero-image {
+      flex: 1;
+      width: 600px;
+      margin: auto;
+      opacity: 0;
+      /* initially hide the image */
+      position: relative;
+      box-shadow: 0px 0px 100px 50px rgb(143, 144, 144);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      /* Add a border around the images */
+      transition: box-shadow 0.3s, filter 0.3s;
+    }
+    .footer-distributed .footer-center i {
+      margin-left: 0;
+    }
+  
+    .image-hover:hover img {
+      filter: brightness(1.3);
+      /* Adjust brightness on hover */
+      box-shadow: 0 0 20px rgb(18, 75, 18);
+      /* Add glow effect on hover */
+      cursor: pointer;
+      /* Change cursor to pointer on hover */
+    }
+
+    .hero-content {
+      flex: 1;
+      width: 600px;
+      margin: 0px 25px;
+      opacity: 0;
+      /* initially hide the content */
+      /* animation: fadeInUp 1s ease 1 forwards; */
+    }
+
+    .hero-content h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+      color:black;
+      font-style: normal;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .hero-content p {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+      color: #877c05;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li p b {
+      color: rgb(248, 240, 240);
+      font-family: 'Abel', sans-serif;
+
+
+    }
+
+    p b {
+      color: rgb(248, 240, 240);
+      font-family: 'Abel', sans-serif;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      .heading h1 {
+        font-size: 45px;
+        margin-top: 30px;
+      }
+
+      .hero {
+        margin: 0px;
+      }
+
+      .container {
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+      }
+
+      .hero-content {
+        width: 100%;
+        margin: 35px 0px;
+      }
+
+      .hero-content h2 {
+        font-size: 30px;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .hero-image {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+    .one {
+      animation: fadeInUp 1s ease 1 forwards;
+    }
+
+    .one-img {
+      animation: fadeInRight 1s ease 1 forwards;
+    }
+
+    #v1 {
+      color: black !important;
+    }
+
+    .a {
+      background-color: #c49b63 !important;
+    }
+
+    #background {
+      position: absolute;
+      width: 100vw;
+      height: 210vh;
+      z-index: -1;
+      filter: blur(16px);
+    }
+    footer {
+    background: #666;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    position: fixed;
+    bottom: 0;
+}
+.footer-distributed {
+    background: #ffffff;
+    /* Change background color to white */
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: auto;
+    color: #000000;
+    /* Change text color to black */
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Footer left */
+  .footer-distributed .footer-left {
+    width: 40%;
+  }
+
+  /* The company logo */
+  .footer-distributed h3 {
+    color: #000000;
+    /* Change text color to black */
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+  }
+
+  .footer-distributed h3 span {
+    color: lightseagreen;
+  }
+
+  /* Footer links */
+  .footer-distributed .footer-links {
+    color: #000000;
+    /* Change text color to black */
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+
+  .footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer-distributed .footer-company-name {
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  /* Footer Center */
+  .footer-distributed .footer-center {
+    width: 35%;
+  }
+
+  .footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+
+  .footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+  }
+
+  .footer-distributed .footer-center p {
+    display: inline-block;
+    color: #000000;
+    /* Change text color to black */
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .footer-distributed .footer-center p a {
+    color: lightseagreen;
+    text-decoration: none;
+  }
+
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+
+  /* Footer Right */
+  .footer-distributed .footer-right {
+    width: 20%;
+  }
+
+  .footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .footer-distributed .footer-company-about span {
+    display: block;
+    color: #000000;
+    /* Change text color to black */
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .footer-distributed .footer-icons {
+    margin-top: 25px;
+  }
+
+  .footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: -2px;
+    margin-bottom: -3px;
+
+  }
+
+  :root {
+    --background: #2c2c2c;
+    --linkedin: #0a66c2;
+    --youtube: #e52d27;
+    --twitter: #131616;
+  }
+
+  .social-media-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .social-media-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    outline: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: grid;
+    place-items: center;
+  }
+
+  .social-media-button:hover {
+    outline-offset: 3px;
+    transition: all 0.3s;
+  }
+
+  .social-media-button img {
+    transition: all 0.3s;
+  }
+
+  .social-media-button:hover img {
+    transform: scale(1.15);
+  }
+
+  .social-media-button:hover:nth-child(1) {
+    background: radial-gradient(circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%);
+  }
+
+  
+
+  .social-media-button:hover:nth-child(2) {
+    background-color: var(--twitter);
+  }
+
+  .social-media-button:hover:nth-child(3) {
+    background-color: var(--youtube);
+  }
+
+  .social-media-button:hover:nth-child(4) {
+    background-color: var(--linkedin);
+  }
+
+  #yt {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  /* If you don't want the footer to be responsive, remove these media queries */
+  @media (max-width: 880px) {
+    .footer-distributed {
+      font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+ 
+  </style>
+</head>
+
+<body>
+  <img
+    src="back1.jpg"
+    alt="" id="background">
+  <!-- Navbar -->
+  <nav id="navi" class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <img id="logo" class="mx-4" src="logo2.jpg" alt="" />
+      <a class="navbar-brand" href="#" id="v1" >KOE - The Kafe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="right-container">
+          <div class="right-container-child">
+            <a class="nav-item" href="three.html">
+              <span></span><span></span><span></span><span></span>Home
+            </a>
+            <a class="nav-item" href="https://bit.ly/KoeTheKafeMenu"><span></span><span></span><span></span><span></span>Menu</a><a
+              class="nav-item-active" href="about.html"><span></span><span></span><span></span><span></span>About Us</a>
+              <!-- <a class="nav-item" href="contactus.html"><span></span><span></span><span></span><span></span>Contact Us
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="heading">
+      <h1>About us</h1>
+    </div>
+    <div class="container">
+      <div class="hero-content" id="first">
+        <h2><u>Our Mission</u></h2>
+        <ul>
+          <li>
+            <p><b>Our mission is to provide a welcoming atmosphere where every cup tells a story. We strive to source the finest beans, foster community connections, and craft exceptional coffee experiences that ignite passion and inspire moments of joy.</b></p>
+          </li>
+          <!-- <li>
+            <p><b>2. We strive to source the finest beans, and craft exceptional coffee experiences that ignite passion and inspire moments of joy.</b></p>
+          </li> -->
+          <!-- <li>
+            <p><b>3. Accessibility all over the world at the best price</b></p>
+          </li> -->
+        </ul>
+      </div>
+      <!-- <div class="hero-image image-hover" id="first-img">
+        <img src="e.jpg" alt="Mission">
+      </div> -->
+      <!-- <video width="900px" height="300px" class="landing-5-video" autoplay="autoplay" loop="" muted>
+        <source src="kafevideo.mp4" type="video/mp4" />
+      </video> -->
+    </div>
+
+    <div class="container">
+      <div class="hero-image image-hover" id="second-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd9RaR8oIBQ4h9F6lmB5J3pk40Yb31V00VqRVcYXUAzw&s"
+          alt="Vision">
+      </div>
+      <div class="hero-content" id="second">
+        <h2><u>Our Vision</u></h2>
+        <p><b>
+            The inception of Kôė was to create a micro scale coffee roasting and food curation experience, with a serene ambience to make the whole experience a complete package for the clientele.
+</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="container" id="last">
+      <div class="hero-content" id="third">
+        <h2><u>Message from the Founder</u></h2>
+        <p><b>
+            Excited to introduce our new coffee cafe! Join us in creating a space where community, conversation, and quality brews come together. Looking forward to serving you soon!
+         
+            </b>
+        </p>
+      </div>
+      <div class="hero-image image-hover" id="third-img">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Mission from the founder">
+      </div>
+    </div>
+
+  </section>
+  <div class="footer-distributed">
+
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="logo2.jpg" alt="" style="height: 103px; width: 110px;">
+        <p class="footer-links">
+          <a href="three.html" class="link-1">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Menu</a>
+          <!-- <a href="contact.html">Contact Us</a> -->
+        </p>
+        <p class="footer-company-name">KOE - The Kafe © 2023</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>205, International Finance Centre, VIP Road,</span> opp. Fire Station,Vesu, Surat, Gujarat 395007</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+1.555.555.5555</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Creating a coffee roasting cafe involved a passion for coffee, a dedication to quality roasting, and a desire to create a welcoming space for coffee enthusiasts. 
+
+        </p>
+        <div class="footer-icons">
+          <span class="social-media-buttons">
+            <span class="social-media-button">
+              <a href="https://www.instagram.com/koethekafe?igsh=OGQ5ZDc2ODk2ZA==" target="_blank"><img width="100%" height="100%" style="border-radius: 10px;" alt=""
+                  src="insta.webp" /></a>
+            </span>
+            <!-- <span class="social-media-button">
+              <a href="" target="_blank">
+
+                <img width="100%" height="100%" alt="Twitter" src="x.jpg" id="x" />
+              </a>
+            </span>
+            <span class="social-media-button">
+              <a href="" target="_blank" style="margin-top: -19px; margin-left: -16px;">
+
+                <img width="100%" height="100%" alt="Youtube" src="yt.jpg" id="yt" />
+              </a>
+            </span>
+            <span class="social-media-button">
+              <a href="" target="_blank">
+                <img width="100%" height="100%" alt="LinkedIn" src="in.jpg" />
+
+              </a>
+
+            </span> -->
+          </span>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+  <script>
+    let containers = document.querySelectorAll('.container');
+    let first = document.getElementById("first")
+    let second = document.getElementById("second")
+    let third = document.getElementById("third")
+    let first_img = document.getElementById("first-img")
+    let second_img = document.getElementById("second-img")
+    let third_img = document.getElementById("third-img")
+
+    function isInViewport(element) {
+      let rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function handleScroll() {
+      if (isInViewport(containers[0])) {
+        first.classList.add("one");
+        first_img.classList.add("one-img");
+      }
+      if (isInViewport(containers[1])) {
+        second.classList.add("one");
+        second_img.classList.add("one-img");
+      }
+      if (isInViewport(containers[2])) {
+        third.classList.add("one");
+        third_img.classList.add("one-img");
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+  </script>
+  </section>
+</body>
+
+</html>
